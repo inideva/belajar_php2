@@ -24,7 +24,7 @@
             <form action="" method="post">
                 <table class="table table-striped">            
                 <tr>
-                    <th>No</th>
+                    <th>No ID</th>
                     <th>Nama</th> 
                     <th>Jenis Kelamin</th>
                     <th>Nomor Telp</th>
@@ -38,7 +38,7 @@
                 ?>
                 <tr>
                     <td>
-                        <?php echo $data["id"]; ?>
+                        <?php echo $data["id"];?>
                     </td>
                     <td>
                         <?php echo $data["nama"];?>
@@ -53,8 +53,8 @@
                         <?php echo $data["alamat"];?>
                     </td>
                     <td>
-                        <a class="btn btn-warning btn-sm" href="edit.php?id=$data[id]">Ubah</a>
-                        <a class="btn btn-danger btn-sm" href="hapus.php?id=$data[id]">Hapus</a>
+                        <a href="edit.php?id=<?php echo $data["id"] ?>" class="btn btn-warning btn-sm">Ubah</a>
+                        <a href="proses_hapus.php?id=<?php echo $data["id"] ?>" class="btn btn-danger btn-sm">Hapus</a>
                     </td>
                 </tr>
                 <?php } ?>
